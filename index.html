@@ -7,31 +7,25 @@
     <title>Modernator</title>
 </head>
 <body>
-    <div > <!--Div temporal en lo que hago el diseno pro-->
-        <div id="inicio" style="display: none;"> <!--Este debe tener un color asi de virus-->
+    <div > 
+        <div id="inicio" style="display: inline;"> <!--Este debe tener un color asi de virus-->
             <h1>Juega Modernator 100% Gratis Aki (SIN VIRUS)</h1>
-            <button id="botonVirus">CLIK AQUI</button>
+            <button id="botonVirus" onclick="cerrarVirus()">CLIK AQUI</button>
         </div>
     </div>
     
-    <div class="main" style="display: none;"> <!--Este tiene el color que Brissa diga al igual que el ultimo div-->
+    <div class="design" id="main" style="display: none;"> <!--Este tiene el color que Brissa diga al igual que el ultimo div-->
         <h1>Modernator</h1>
-        <p id="pregunta">pregunto yo</p>
-            <div class="botones">
-                <button id="opcion1">Sí</button>
-                <button id="opcion2">No</button>
-                <button id="opcion3">No lo se</button>
-            </div>
-       
+        <div id="pregunta">pregunto yo</div>
+            <div id="botones"></div>
     </div>
-    <div class="main" id="resultado">
+    <div class="design" style="display: none;" id="resultado">
         <h2>Pensaste en</h2>
         <figure>
             <img>
         </figure>
         <p>Personaje que penso la persona</p>
-
-
     </div>
+    <script src="script.js"></script>
 </body>
 </html>

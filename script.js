@@ -100,5 +100,194 @@ let characters = [
     }
 ]
 
-let preguntas = ["¿Tu personaje es mujer?","¿Tu personaje es mayor a 30?","¿Tu personaje es mayor a 30?","¿Tu personaje es de la familia Dunphy?","¿Tu personaje es de la Familia Dunphy?","¿Tu perosnaje es de la familia Tucker?","¿Tu perosnaje es de la familia Dunphy?"," "," ","¿Tu personaje tiene hijos?"," ","¿Tu personaje es pelirrojo?","¿Tu personaje trabaja en una inmobiliaria?"," "," "]
+
+
+function cerrarVirus() {
+    var inicio = document.getElementById("inicio");
+    inicio.style.display = 'none';
+
+    var main = document.getElementById("main");
+    main.style.display = 'inline';
+}
+
+function cerrarMain() {
+    var main = document.getElementById("main");
+    main.style.display = 'none';
+
+    var resultado = document.getElementById("resultado");
+    resultado.style.display = 'inline';
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    const storyContainer = document.getElementById("main");
+    const storyText = document.getElementById("pregunta");
+    const choicesContainer = document.getElementById("botones");
+
+    let preguntas = [
+        {
+            question: "¿Tu personaje es mujer?",
+            choices: [
+                {text: "Si", nextQuestion: 1},
+                {text: "No", nextQuestion: 2}
+            ]
+        },
+        {
+            question: "¿Tu personaje es mayor a 30?",
+            choices: [
+                {text: "Si", nextQuestion: 3},
+                {text: "No", nextQuestion: 4}
+            ]
+        },
+        {
+            question: "¿Tu personaje es mayor a 30?",
+            choices: [
+                {text: "Si", nextQuestion: 5},
+                {text: "No", nextQuestion: 6}
+            ]
+        },
+        {
+            question: "¿Tu perosnaje es de la familia Dunphy?",
+            choices: [
+                {text: "Si", nextQuestion: 10},
+                {text: "No", nextQuestion: 11}
+            ]
+        },
+        {
+            question: "¿Tu perosnaje es de la familia Dunphy?",
+            choices: [
+                {text: "Si", nextQuestion: 7},
+                {text: "No", nextQuestion: 4}
+            ]
+        },
+        {
+            question: "¿Tu perosnaje es de la familia Tucker?",
+            choices: [
+                {text: "Si", nextQuestion: 8},
+                {text: "No", nextQuestion: 9}
+            ]
+        },
+        {
+            question: "¿Tu perosnaje es de la familia Dunphy?",
+            choices: [
+                {text: "Si", nextQuestion: 19},
+                {text: "No", nextQuestion: 20}
+            ]
+        },
+        {
+            question: "¿Tu personaje tiene hijos?",
+            choices: [
+                {text: "Si", nextQuestion: 12},
+                {text: "No", nextQuestion: 13}
+            ]
+        },
+        {
+            question: "¿Tu personaje es pelirrojo?",
+            choices: [
+                {text: "Si", nextQuestion: 15},
+                {text: "No", nextQuestion: 16}
+            ]
+        },
+        {
+            question: "¿Tu personaje trabaja en una inmobiliaria?",
+            choices: [
+                {text: "Si", nextQuestion: 17},
+                {text: "No", nextQuestion: 18}
+            ]
+        },
+        {
+            question: "¿Tu personaje es Claire?",
+            choices: [
+                {text: "Gracias por jugar!!", nextQuestion: undefined}
+            ]
+        },
+        {
+            question: "¿Tu personaje es Gloria?",
+            choices: [
+                {text: "Gracias por jugar!!", nextQuestion: undefined}
+            ]
+        },
+        {
+            question: "¿Tu personaje es Haley?",
+            choices: [
+                {text: "Gracias por jugar!!", nextQuestion: undefined}
+            ]
+        },
+        {
+            question: "¿Tu personaje es Alex?",
+            choices: [
+                {text: "Gracias por jugar!!", nextQuestion: undefined}
+            ]
+        },
+        {
+            question: "¿Tu personaje es Liy?",
+            choices: [
+                {text: "Gracias por jugar!!", nextQuestion: undefined}
+            ]
+        },
+        {
+            question: "¿Tu personaje es Mitch?",
+            choices: [
+                {text: "Gracias por jugar!!", nextQuestion: undefined}
+            ]
+        },
+        {
+            question: "¿Tu personaje es Cam?",
+            choices: [
+                {text: "Gracias por jugar!!", nextQuestion: undefined}
+            ]
+        },
+        {
+            question: "¿Tu personaje es Phil?",
+            choices: [
+                {text: "Gracias por jugar!!", nextQuestion: undefined}
+            ]
+        },
+        {
+            question: "¿Tu personaje es Jay?",
+            choices: [
+                {text: "Gracias por jugar!!", nextQuestion: undefined}
+            ]
+        },
+        {
+            question: "¿Tu personaje es Luke?",
+            choices: [
+                {text: "Gracias por jugar!!", nextQuestion: undefined}
+            ]
+        },
+        {
+            question: "¿Tu personaje es Manny?",
+            choices: [
+                {text: "Gracias por jugar!!", nextQuestion: undefined}
+            ]
+        },];
+
+    let currentQuestionIndex = 0;
+
+    function displayQuestion() {
+        const currentQuestion = preguntas[currentQuestionIndex];
+        pregunta.textContent = currentQuestion.question;
+
+
+    currentQuestion.choices.forEach(choice => {
+        const choiceButton = document.createElement("button");
+        choiceButton.className = "opciones";
+        choiceButton.textContent = choice.text;
+        choiceButton.addEventListener("click", () => navigateTo(choice.Question));
+        choicesContainer.appendChild(choiceButton);
+    })
+    } //falta terminar logica de este metodo
+
+    function navigateTo(nextStoryIndex){
+        if(nextStoryIndex !== undefined && preguntas[nextStoryIndex]){
+            currentQuestionIndex = nextStoryIndex;
+            displayQuestion();
+        }else{
+            storyText.textContent = choice.text;
+            choicesContainer.innerHTML = "";
+        }
+    }
+
+    displayQuestion();
+});
+
 

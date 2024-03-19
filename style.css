@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Khojki&family=Quicksand:wght@600;700&display=swap');
+
+body{
+  /*  background-color: cyan; color inicial de background-color*/
+  margin: 0;
+  display:flex;
+  text-align: center;
+  padding: auto 40%;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  background-color: rgb(136,176,75);
+}
+
+#inicio {
+    font-family: "Noto Sans Khojki", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin: 5% 15% 0% 15%;
+    padding: 10% 20% 10% 20%;
+    text-align: center;
+    color: white;
+} 
+
+#inicio h1{
+    font-size: 50px;
+}
+
+h1{
+    text-align: center;
+}
+
+p#pregunta{    
+    text-align:center;
+    margin: 0 auto;
+    margin-bottom: 2%;
+}
+
+#botonVirus {
+    margin-top: 5%;
+    margin-right: auto;
+    margin-left: auto;
+    width: auto;
+    height: auto;
+    display: flex;
+    font-size: 80px; 
+    background-color: rgb(64, 202, 64);
+    color:yellow;
+    border-color: yellow;
+    border-width: 20px;
+}
+
+.design {
+    text-align: center;
+    background-color: #2fd242f6;
+    margin-top: 15%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    width: 20%;
+    height: 20%;
+    border: 5px solid greenyellow;
+    border-radius: 20px;
+
+}
+
+
+.botones{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    margin: 0 auto;
+    padding-top: 1%;
+} 
+
+.botones button{
+    margin-bottom: 5%;
+    size: 1.5em;
+    border: 2px solid greenyellow;
+    border-radius: 30px;
+    box-shadow: 0 0 5px green;
+}
+
+.botones button:hover{
+    background-color: gray;
+}
+
+
+
